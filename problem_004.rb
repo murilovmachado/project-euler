@@ -1,7 +1,6 @@
 def getLargestPalindromeFromProductOfTwoFactors(digitsFromFactors)
 	maxFactor = ("9" * digitsFromFactors).to_i
 	palidromes = Array.new
-	count = 0
 
 	# Optimization variables
 	optimizingOn = false
@@ -11,7 +10,6 @@ def getLargestPalindromeFromProductOfTwoFactors(digitsFromFactors)
 	while i >= 1 and i > maxFirstFactorForPalindrome
 		j = i
 		while j >= 1
-			count += 1
 			product = i * j
 			if isPalindrome product
 				palidromes.push product
